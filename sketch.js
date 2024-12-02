@@ -35,8 +35,8 @@ function preload() {
     backB.hide();
   
     //story line
-    a = createButton('Today was a great day to go shopping, its been hot all week til today. I mean I moved north to avoid the heat, not suffer ten times more. Global warming is really global-ing.');
-    a.position(50,560,500);
+    a = createButton('Global warming is really global-ing.');
+    a.position(50,610);
     a.style('font-family','Courier New');
     a.style('font-size','25px');
     a.style('color','#ffffff');
@@ -58,6 +58,14 @@ function preload() {
     c.style('color','#ffffff');
     c.style('background-color','#000000');
     c.hide();
+
+    d = createButton('Suddenly I felt someone grab the back of my shirt.');
+    d.position(50,560);
+    d.style('font-family','Courier New');
+    d.style('font-size','25px');
+    d.style('color','#ffffff');
+    d.style('background-color','#000000');
+    d.hide();
 
     //text formatting
     textStyle(BOLD);  
@@ -164,6 +172,7 @@ function preload() {
         //text box
         image(textBox,0,0);  
         
+        text('Today was a great day to go shopping, its been hot all week til today.',50,560,1200);
         a.mousePressed(()=>{stage = 6
             a.hide();
             b.show();
@@ -187,7 +196,7 @@ function preload() {
             c.hide();
         });
 
-        c.mousePressed(()=>{stage = 7
+        c.mousePressed(()=>{stage = 8
             b.hide();
             c.hide();
         });
@@ -200,15 +209,15 @@ function preload() {
         image(bg,0,0);
     
         //text box
-        image(textBox,0,0);   
-        
-        text('Suddenly I felt someone grab the back of my shirt.',50,560,1200);
+        image(textBox,0,0); 
 
-        if (keyIsPressed === true) {
-          (()=>{stage = 9});
-        } else {
-          (()=>{stage = 7});
-        }
+        d.show();
+
+        d.mousePressed(()=>{stage = 8
+            d.hide();
+        });
+
+
   
         break;
 
