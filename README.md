@@ -3,8 +3,7 @@
 
 ### :FEATURES:
 * Gray-scale illustrations
-* 03 Love Interests
-* 02 Endings so far (01 True Ending) 
+* 02 Endings so far
 
 ### :CONTENT WARNING:
 This game contains gore, violence, stalking, para-social, cannibalism, harassment, murder.
