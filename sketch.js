@@ -15,17 +15,17 @@ function preload() {
   startScreen = loadImage('start_screen.png'); //start screen
   bg = loadImage('background.png'); //blank background
   textBox = loadImage('text_box.png'); //text box
-  /*
-  ss0 = loadImage('');
-  ss1 = loadImage('');
-  ss2 = loadImage('');
-  ss3 = loadImage('');
-  ss4 = loadImage('');
-  ss5 = loadImage('');
-  ss6 = loadImage('');
-  ss7 = loadImage('');
-  ss8 = loadImage('');
-  ss9 = loadImage('');
+
+  ss0 = loadImage('ss0.png'); //city
+  ss1 = loadImage('ss1.png'); //city w/ dahlia
+  ss2 = loadImage('ss2.png'); //city w/ mad dahlia
+  ss3 = loadImage('ss3.png'); //city w/ happy dahlia
+  ss4 = loadImage('ss4.png'); //apartment hall
+  ss5 = loadImage('ss5.png'); //apartment inside night
+  ss6 = loadImage('ss6.png'); //apartment inside night with shadow
+  ss7 = loadImage('ss7.png'); //apartment inside morning
+  ss8 = loadImage('ss8.png'); //apartment hallway with cop
+  /* ss9 = loadImage('');
   st0 = loadImage('');
   st1 = loadImage('');
   st2 = loadImage('');
@@ -416,7 +416,7 @@ function preload() {
     //game start
     case 6:      
         //background screen
-        image(bg,0,0);
+        image(ss0,0,0);
 
         //text
         image(textBox,0,0);  
@@ -431,7 +431,7 @@ function preload() {
 
     case 7:
         //background screen
-        image(bg,0,0);
+        image(ss0,0,0);
   
         //text
         image(textBox,0,0);  
@@ -452,7 +452,7 @@ function preload() {
 
     case 8:
         //background screen
-        image(bg,0,0);
+        image(ss0,0,0);
     
         //text
         image(textBox,0,0); 
@@ -468,7 +468,7 @@ function preload() {
 
     case 9:
         //background screen
-        image(bg,0,0);
+        image(ss1,0,0);
       
         //text
         image(textBox,0,0);    
@@ -484,7 +484,7 @@ function preload() {
 
     case 10:
         //background screen
-        image(bg,0,0);
+        image(ss1,0,0);
         
         //text
         image(textBox,0,0);    
@@ -505,7 +505,7 @@ function preload() {
 
     case 11:
         //background screen
-        image(bg,0,0);
+        image(ss2,0,0);
         
         //text
         image(textBox,0,0);     
@@ -519,7 +519,7 @@ function preload() {
 
     case 12:
         //background screen
-        image(bg,0,0);
+        image(ss3,0,0);
           
         //text 
         image(textBox,0,0);     
@@ -532,7 +532,7 @@ function preload() {
 
     case 13:
         //background screen
-        image(bg,0,0);
+        image(ss0,0,0);
           
         //text 
         image(textBox,0,0);            
@@ -546,7 +546,7 @@ function preload() {
     
     case 14:
         //background scene
-        image(bg,0,0);
+        image(ss4,0,0);
 
         //text
         image(textBox,0,0);
@@ -559,7 +559,7 @@ function preload() {
 
     case 15:
         //background scene
-        image(bg,0,0);
+        image(ss6,0,0);
 
         //text
         image(textBox,0,0);
@@ -571,7 +571,7 @@ function preload() {
 
     case 16:
         //background scene
-        image(bg,0,0);
+        image(ss5,0,0);
 
         //text
         image(textBox,0,0);
@@ -585,7 +585,7 @@ function preload() {
 
     case 17:
         //background scene
-        image(bg,0,0);
+        image(ss7,0,0);
     
         //text
         image(textBox,0,0);
@@ -600,7 +600,7 @@ function preload() {
 
     case 18:
         //background scene
-        image(bg,0,0);
+        image(ss7,0,0);
 
         //text
         image(textBox,0,0);
@@ -621,7 +621,7 @@ function preload() {
         
     case 19:
         //background scene
-        image(bg,0,0);
+        image(ss8,0,0);
 
         //text  
         image(textBox,0,0);
@@ -635,7 +635,7 @@ function preload() {
     
     case 20:
         //background scene
-        image(bg,0,0);
+        image(ss7,0,0);
 
         //text  
         image(textBox,0,0);
@@ -648,7 +648,7 @@ function preload() {
 
     case 21:
         //background
-        image(bg,0,0);
+        image(ss7,0,0);
 
         //text
         image(textBox,0,0);
