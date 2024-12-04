@@ -183,39 +183,39 @@ function preload() {
     n.style('background-color','#000000');
     n.hide();
 
-    o = createButton('> Weird... Did I misplace it?');
-    o.position(70,640);
+    o = createButton('> Call the police.');
+    o.position(70,670);
     o.style('font-family','Courier New');
     o.style('font-size','25px');
     o.style('color','#ffffff');
     o.style('background-color','#000000');
     o.hide();
 
-    p = createButton('> Call the police.');
-    p.position(70,670);
+    p = createButton('> Dont call the police, its probably in the dirty laundry.');
+    p.position(70,700);
     p.style('font-family','Courier New');
     p.style('font-size','25px');
     p.style('color','#ffffff');
     p.style('background-color','#000000');
     p.hide();
 
-    q = createButton('> Dont call the police, its probably in the dirty laundry.');
-    q.position(70,690);
+    q = createButton('> So am I just going crazy then..?');
+    q.position(70,640);
     q.style('font-family','Courier New');
     q.style('font-size','25px');
     q.style('color','#ffffff');
     q.style('background-color','#000000');
     q.hide();
 
-    r = createButton('> So am I just goping crazy then..?');
-    r.position(70,640);
+    r = createButton('I push it back as you being forgetful and go about my morning routine.');
+    r.position(50,560);
     r.style('font-family','Courier New');
     r.style('font-size','25px');
     r.style('color','#ffffff');
     r.style('background-color','#000000');
     r.hide();
 
-    s = createButton('I push it back as you being forgetful and go about your day.');
+    s = createButton('> I close my eyes while I wash my face.');
     s.position(70,640);
     s.style('font-family','Courier New');
     s.style('font-size','25px');
@@ -223,8 +223,8 @@ function preload() {
     s.style('background-color','#000000');
     s.hide();
 
-    t = createButton('I close my eyes and wash my face.');
-    t.position(70,640);
+    t = createButton('I feel something heavy slam against my head, my eyes no longer able to open.');
+    t.position(50,560);
     t.style('font-family','Courier New');
     t.style('font-size','25px');
     t.style('color','#ffffff');
@@ -489,12 +489,12 @@ function preload() {
         //text
         image(textBox,0,0);    
         text('[???] "Could you walk with me..? My sense of direction is constantly challenged."', 50, 560,1200);
-
-        f.mousePressed(()=>{stage = 11
+        /*
+        f.mousePressed(()=>{stage = 25
             f.hide();
             g.hide();
         });
-        
+        */
         g.mousePressed(()=>{stage = 11
             f.hide();
             g.hide();
@@ -594,37 +594,116 @@ function preload() {
         n.mousePressed(()=>{stage = 18
             n.hide();
             o.show();
+            p.show();
         });
         break;
 
     case 18:
+        //background scene
+        image(bg,0,0);
+
         //text
         image(textBox,0,0);
-        text('I start to get changed but theres more of my things missing. My hoodies, tshisrts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
+        text('I start to get changed but theres more of my things missing. My hoodies, tshirts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
+        
         o.mousePressed(()=>{stage = 19
             o.hide();
-            p.show();
+            p.hide();
+            q.show();
+        });
+
+        p.mousePressed(()=>{stage = 20
+            o.hide();
+            p.hide();
+            r.show();
         });
         break;
         
     case 19:
+        //background scene
+        image(bg,0,0);
+
         //text  
         image(textBox,0,0);
-        text('I start to get changed but theres more of my things missing. My hoodies, tshisrts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
-        o.mousePressed(()=>{stage = 19
-            o.hide();
-            p.show();
+        text('They come but do absolutely nothing. "There was no sign of break in so theres nothing we can do about it," he said.',50,560,1200);
+        
+        q.mousePressed(()=>{stage = 23
+            q.hide();
+            end1.show();
+        });
+        break;s
+    
+    case 20:
+        //background scene
+        image(bg,0,0);
+
+        //text  
+        image(textBox,0,0);
+
+        r.mousePressed(()=>{stage = 21
+            r.hide();
+            s.show();
         });
         break;
 
-    case 18:
+    case 21:
+        //background
+        image(bg,0,0);
+
         //text
         image(textBox,0,0);
-        text('I start to get changed but theres more of my things missing. My hoodies, tshisrts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
-        o.mousePressed(()=>{stage = 19
-            o.hide();
-            p.show();
+        text('I head to the bathroom and strip down before hopping into the shower. I wait for the water to get steamy before starting my shoower.',50,560,1200);
+
+        s.mousePressed(()=>{stage = 22
+            s.hide();
+            t.show();
         });
+        break;
+
+    case 22:
+        //background
+        image(bg,0,0);
+
+        //text
+        image(textBox,0,0);
+
+        t.mousePressed(()=>{stage = 24
+            t.hide();
+            end2.show();
+        });
+        break;
+
+    case 23:
+        //background
+        image(bg,0,0);
+
+        //text
+        image(textBox,0,0);1
+
+        end1.mousePressed(()=>{stage = 0
+            end1.hide();
+            newGame.show();
+            settings.show();
+        });
+        break;
+
+    case 24:
+        //background
+        image(bg,0,0);
+
+        //text
+        image(textBox,0,0);
+
+        end2.mousePressed(()=>{stage = 0
+            end2.hide();
+            newGame.show();
+            settings.show();
+        });
+        break;
+
+    case 25:
+        //background
+        //text
         break;
         
  }
