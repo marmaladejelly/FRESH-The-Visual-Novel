@@ -9,7 +9,7 @@ let a1,b1,c1,d1,e1,f1,g1,h1,i1,j1,k1,l1,m1,n1,o1,p1,q1,r1,s1,t1,u1,v1,w1,x1,y1,z
 let ss0,ss1,ss2,ss3,ss4,ss5,ss6,ss7,ss8,ss9;
 let st0,st1,st2,st3,st4,st5,st6,st7,st8,st9;
 let stb0,stb1,stb2,stb3,stb4,stb5,stb6,stb7,stb8,stb9;
-let END1,END2;
+let end1,end2,end3;
 
 function preload() {
   startScreen = loadImage('start_screen.png'); //start screen
@@ -167,7 +167,7 @@ function preload() {
     l.style('background-color','#000000');
     l.hide();
 
-    m = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
+    m = createButton('> "What the... Did the winds blow that hard..??" Unable to fall asleep, I get ready.');
     m.position(70,640);
     m.style('font-family','Courier New');
     m.style('font-size','25px');
@@ -175,15 +175,15 @@ function preload() {
     m.style('background-color','#000000');
     m.hide();
 
-    n = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
-    n.position(70,640);
+    n = createButton('> Weird... Did I misplace it?');
+    n.position(70,610);
     n.style('font-family','Courier New');
     n.style('font-size','25px');
     n.style('color','#ffffff');
     n.style('background-color','#000000');
     n.hide();
 
-    o = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
+    o = createButton('> Weird... Did I misplace it?');
     o.position(70,640);
     o.style('font-family','Courier New');
     o.style('font-size','25px');
@@ -191,23 +191,23 @@ function preload() {
     o.style('background-color','#000000');
     o.hide();
 
-    p = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
-    p.position(70,640);
+    p = createButton('> Call the police.');
+    p.position(70,670);
     p.style('font-family','Courier New');
     p.style('font-size','25px');
     p.style('color','#ffffff');
     p.style('background-color','#000000');
     p.hide();
 
-    q = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
-    q.position(70,640);
+    q = createButton('> Dont call the police, its probably in the dirty laundry.');
+    q.position(70,690);
     q.style('font-family','Courier New');
     q.style('font-size','25px');
     q.style('color','#ffffff');
     q.style('background-color','#000000');
     q.hide();
 
-    r = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
+    r = createButton('> So am I just goping crazy then..?');
     r.position(70,640);
     r.style('font-family','Courier New');
     r.style('font-size','25px');
@@ -215,7 +215,7 @@ function preload() {
     r.style('background-color','#000000');
     r.hide();
 
-    s = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
+    s = createButton('I push it back as you being forgetful and go about your day.');
     s.position(70,640);
     s.style('font-family','Courier New');
     s.style('font-size','25px');
@@ -223,7 +223,7 @@ function preload() {
     s.style('background-color','#000000');
     s.hide();
 
-    t = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
+    t = createButton('I close my eyes and wash my face.');
     t.position(70,640);
     t.style('font-family','Courier New');
     t.style('font-size','25px');
@@ -231,7 +231,7 @@ function preload() {
     t.style('background-color','#000000');
     t.hide();
 
-    u = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
+    u = createButton('I feel something heavy slam against my head, my eyes no longer able to open.');
     u.position(70,640);
     u.style('font-family','Courier New');
     u.style('font-size','25px');
@@ -286,6 +286,31 @@ function preload() {
     a1.style('color','#ffffff');
     a1.style('background-color','#000000');
     a1.hide();
+
+    //endings
+    end1 = createButton('ENDING 1 UNLOCKED: MISSING ITEMS');
+    end1.position(50,560);
+    end1.style('font-family','Courier New');
+    end1.style('font-size','25px');
+    end1.style('color','#ffffff');
+    end1.style('background-color','#000000');
+    end1.hide();
+
+    end2 = createButton('ENDING 2 UNLOCKED: KNAPPED');
+    end2.position(50,560);
+    end2.style('font-family','Courier New');
+    end2.style('font-size','25px');
+    end2.style('color','#ffffff');
+    end2.style('background-color','#000000');
+    end2.hide();
+
+    end3 = createButton('ENDING 3 UNLOCKED: NEW GIRLFRIEND');
+    end3.position(50,560);
+    end3.style('font-family','Courier New');
+    end3.style('font-size','25px');
+    end3.style('color','#ffffff');
+    end3.style('background-color','#000000');
+    end3.hide();
 
     //text formatting
     textStyle(BOLD);  
@@ -550,9 +575,11 @@ function preload() {
 
         //text
         image(textBox,0,0);
+        text('I woke up to a loud thud. When I looked to the side I saw my blancony doors open.',50,560,1200);
+
         m.mousePressed(()=>{stage = 17
-            k.hide();
-            l.show();
+            m.hide();
+            n.show();
         });
         break;
 
@@ -562,17 +589,44 @@ function preload() {
     
         //text
         image(textBox,0,0);
-        text('')
-        n.mousePressed(()=>{stage = 18
-            k.hide();
-            l.show();
-        });
+        text('As Im making myself coffee, I cant seem to find my coffee cup.',50,560,1200);
 
-        o.mousePressed(()=>{stage = 19
-            k.hide();
-            l.show();
+        n.mousePressed(()=>{stage = 18
+            n.hide();
+            o.show();
         });
         break;
+
+    case 18:
+        //text
+        image(textBox,0,0);
+        text('I start to get changed but theres more of my things missing. My hoodies, tshisrts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
+        o.mousePressed(()=>{stage = 19
+            o.hide();
+            p.show();
+        });
+        break;
+        
+    case 19:
+        //text  
+        image(textBox,0,0);
+        text('I start to get changed but theres more of my things missing. My hoodies, tshisrts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
+        o.mousePressed(()=>{stage = 19
+            o.hide();
+            p.show();
+        });
+        break;
+
+    case 18:
+        //text
+        image(textBox,0,0);
+        text('I start to get changed but theres more of my things missing. My hoodies, tshisrts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
+        o.mousePressed(()=>{stage = 19
+            o.hide();
+            p.show();
+        });
+        break;
+        
  }
 }
 
