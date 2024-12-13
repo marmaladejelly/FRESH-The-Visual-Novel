@@ -25,8 +25,8 @@ function preload() {
   ss6 = loadImage('ss6.png'); //apartment inside night with shadow
   ss7 = loadImage('ss7.png'); //apartment inside morning
   ss8 = loadImage('ss8.png'); //apartment hallway with cop
-  /* ss9 = loadImage('');
-  st0 = loadImage('');
+  // ss9 = loadImage(''); //apartment hall with angry cop
+  /* st0 = loadImage(''); 
   st1 = loadImage('');
   st2 = loadImage('');
   st3 = loadImage('');
@@ -46,6 +46,8 @@ function preload() {
   stb7 = loadImage('');
   stb8 = loadImage('');
   stb9 = loadImage(''); */
+
+  end2s = loadImage('end2.png'); // yn laying down tied up with blood
 }
   
   function setup() {
@@ -71,47 +73,47 @@ function preload() {
     backB.hide();
   
     //story line
-    a = createButton('Global warming is really global-ing.');
-    a.position(50,610);
+    a = createButton('> I should really try thrifting some clothes for the hot weather soon..');
+    a.position(70,640);
     a.style('font-family','Courier New');
     a.style('font-size','25px');
     a.style('color','#ffffff');
     a.style('background-color','#000000');
     a.hide();
 
-    b = createButton('> No, shes probably just looking for a friend.');
-    b.position(70,610);
+    b = createButton('> You help her.');
+    b.position(70,660);
     b.style('font-family','Courier New');
     b.style('font-size','25px');
     b.style('color','#ffffff');
     b.style('background-color','#000000');
     b.hide();
 
-    c = createButton('> I mean… It is getting late. "Uhm.. Do you need help?"');
-    c.position(70,650);
+    c = createButton('> You dont help her');
+    c.position(70,700);
     c.style('font-family','Courier New');
     c.style('font-size','25px');
     c.style('color','#ffffff');
     c.style('background-color','#000000');
     c.hide();
 
-    d = createButton('Suddenly I felt someone grab the back of my shirt.');
-    d.position(50,560);
+    d = createButton('> She looks up at me, her eyes meeting mine and curls her lips into a smile.');
+    d.position(70,640);
     d.style('font-family','Courier New');
     d.style('font-size','25px');
     d.style('color','#ffffff');
     d.style('background-color','#000000');
     d.hide();
 
-    e = createButton('> "Uh.. Yea, I know where that is." You give her verbal directions.');
-    e.position(70,610);
+    e = createButton('> "Yea, down the street on the right, across from Sallys Cat Cafe."');
+    e.position(70,640);
     e.style('font-family','Courier New');
     e.style('font-size','25px');
     e.style('color','#ffffff');
     e.style('background-color','#000000');
     e.hide();
 
-    f = createButton('> "Uhm.. Yea, okay." You walk with her to Faded Times.');
+    f = createButton('> "Yea, ofcourse." I decide to walk with her to Faded Times, my project can wait.');
     f.position(70,640);
     f.style('font-family','Courier New');
     f.style('font-size','25px');
@@ -119,7 +121,7 @@ function preload() {
     f.style('background-color','#000000');
     f.hide();
 
-    g = createButton('> "Sorry but Im in a rush right now."');
+    g = createButton('> "Im sorry but Im in a rush... I hope you get to your destination with no troubles."');
     g.position(70,680);
     g.style('font-family','Courier New');
     g.style('font-size','25px');
@@ -127,8 +129,8 @@ function preload() {
     g.style('background-color','#000000');
     g.hide();
 
-    h = createButton('> "Yea." I nod, a bit taken back from her fast change in expressions.');
-    h.position(70,650);
+    h = createButton('> "Well this is it.." I turn around to walk off but she grabs my hand.');
+    h.position(70,680);
     h.style('font-family','Courier New');
     h.style('font-size','25px');
     h.style('color','#ffffff');
@@ -288,8 +290,8 @@ function preload() {
     a1.hide();
 
     //endings
-    end1 = createButton('ENDING 1 UNLOCKED: MISSING ITEMS');
-    end1.position(50,560);
+    end1 = createButton('> ENDING 1 UNLOCKED');
+    end1.position(70,640);
     end1.style('font-family','Courier New');
     end1.style('font-size','25px');
     end1.style('color','#ffffff');
@@ -420,7 +422,7 @@ function preload() {
 
         //text
         image(textBox,0,0);  
-        text('Today was a great day to go shopping, its been hot all week til today.',50,560,1200);
+        text('Today was a great day to go shopping, its been hot all week til today. Global warming is really global-ing.',50,560,1200);
        
         a.mousePressed(()=>{stage = 7
             a.hide();
@@ -435,7 +437,7 @@ function preload() {
   
         //text
         image(textBox,0,0);  
-        text('She looks lost, I wonder if i should help her?',50,560,1200);
+        text('As I approach the art shop Bennys Supplier I see a young woman. Her brown skin glistens in the sun as she looks around with wide eyes. She looks lost, I wonder if I should help her?',50,560,1200);
 
         b.mousePressed(()=>{stage = 8
             b.hide();
@@ -443,10 +445,10 @@ function preload() {
             d.show();
         });
 
-        c.mousePressed(()=>{stage = 9
+        c.mousePressed(()=>{stage = 23
             b.hide();
             c.hide();
-            e.show();
+            end1.show();
         });
         break;
 
@@ -456,6 +458,7 @@ function preload() {
     
         //text
         image(textBox,0,0); 
+        text('I mean it is starting to get late... I approach her with a friendly smile, "Hey... do you need any help?"',50,560,1200)
 
         d.mousePressed(()=>{stage = 9
             d.hide();
@@ -472,7 +475,7 @@ function preload() {
       
         //text
         image(textBox,0,0);    
-        text('[???] "Faded Times? Do you know where it is..?"',50,560,1200);
+        text('[???] "Faded Times.. Do you happen to know where that is..?" Her eyes full of confusion while she holds onto her arms.',50,560,1200);
         
         e.mousePressed(()=>{stage = 10
             e.hide();        
@@ -488,17 +491,17 @@ function preload() {
         
         //text
         image(textBox,0,0);    
-        text('[???] "Could you walk with me..? My sense of direction is constantly challenged."', 50, 560,1200);
-        /*
-        f.mousePressed(()=>{stage = 25
-            f.hide();
-            g.hide();
-        });
-        */
-        g.mousePressed(()=>{stage = 11
+        text('[???] "Would it be possible for you to direct me there? I have a horrible sense of direction, Ill probably get lost along the way." She chuckles.', 50, 560,1200);
+   
+        f.mousePressed(()=>{stage = 11
             f.hide();
             g.hide();
             h.show();
+        });
+      
+        g.mousePressed(()=>{stage = 23
+            f.hide();
+            g.hide();
         });
 
         break;
@@ -509,7 +512,7 @@ function preload() {
         
         //text
         image(textBox,0,0);     
-        text('[???] “You said make a left at the end of the block and its on the right next to the Cat Cafe. Right..?”',50,560,1200)
+        text('Her smile widens, almost creepily as her teeth are fully bared. I push the feeling to the back of my head as I walk with her, making small chat until we reach to the front doors of the mom and pop vintage shop.',50,560,1200)
         
         h.mousePressed(()=>{stage = 12
             h.hide();
@@ -675,10 +678,11 @@ function preload() {
 
     case 23:
         //background
-        image(bg,0,0);
+        image(ss2,0,0);
 
         //text
-        image(textBox,0,0);1
+        image(textBox,0,0);
+        text('You avoided the woman forming a one-sided connection between you and her. You get home and never see her again.',50,560,1200);
 
         end1.mousePressed(()=>{stage = 0
             end1.hide();
