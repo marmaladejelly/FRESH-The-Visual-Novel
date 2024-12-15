@@ -25,9 +25,9 @@ function preload() {
   ss6 = loadImage('ss6.png'); //apartment inside night with shadow
   ss7 = loadImage('ss7.png'); //apartment inside morning
   ss8 = loadImage('ss8.png'); //apartment hallway with cop
-  // ss9 = loadImage(''); //apartment hall with angry cop
-  /* st0 = loadImage(''); 
-  st1 = loadImage('');
+  ss9 = loadImage('ss9.png'); //apartment with dahlia inside
+  st0 = loadImage('ss10.png'); //apartment with killer dahlia inside
+  /* st1 = loadImage('');
   st2 = loadImage('');
   st3 = loadImage('');
   st4 = loadImage('');
@@ -137,8 +137,8 @@ function preload() {
     h.style('background-color','#000000');
     h.hide();
 
-    i = createButton('She smiles wider before walking off... Weird.');
-    i.position(50,560);
+    i = createButton('> She smiles wider before walking off... Weird. Im just gonna go home..');
+    i.position(70,640);
     i.style('font-family','Courier New');
     i.style('font-size','25px');
     i.style('color','#ffffff');
@@ -161,8 +161,8 @@ function preload() {
     k.style('background-color','#000000');
     k.hide();
 
-    l = createButton('I decide to get ready for bed, I have to work on my final tomorrow after all.');
-    l.position(50,560);
+    l = createButton('> I decide to get ready for bed, I have to work on my final tomorrow after all.');
+    l.position(70,560);
     l.style('font-family','Courier New');
     l.style('font-size','25px');
     l.style('color','#ffffff');
@@ -185,7 +185,7 @@ function preload() {
     n.style('background-color','#000000');
     n.hide();
 
-    o = createButton('> Call the police.');
+    o = createButton('> Where did all my things go?? Theres no way I misplaced them all.');
     o.position(70,670);
     o.style('font-family','Courier New');
     o.style('font-size','25px');
@@ -193,16 +193,16 @@ function preload() {
     o.style('background-color','#000000');
     o.hide();
 
-    p = createButton('> Dont call the police, its probably in the dirty laundry.');
-    p.position(70,700);
+    p = createButton('> "U-uhm.. D-Dahlia..?" I sputter as I see the same girl from yesterday.');
+    p.position(70,670);
     p.style('font-family','Courier New');
     p.style('font-size','25px');
     p.style('color','#ffffff');
     p.style('background-color','#000000');
     p.hide();
 
-    q = createButton('> So am I just going crazy then..?');
-    q.position(70,640);
+    q = createButton('> [DAHLIA] "Im sorry, I cant let you go." Before I could scream everything went black.');
+    q.position(70,680);
     q.style('font-family','Courier New');
     q.style('font-size','25px');
     q.style('color','#ffffff');
@@ -298,8 +298,8 @@ function preload() {
     end1.style('background-color','#000000');
     end1.hide();
 
-    end2 = createButton('ENDING 2 UNLOCKED: KNAPPED');
-    end2.position(50,560);
+    end2 = createButton('> ENDING 2 UNLOCKED: KNAPPED');
+    end2.position(70,640);
     end2.style('font-family','Courier New');
     end2.style('font-size','25px');
     end2.style('color','#ffffff');
@@ -445,7 +445,7 @@ function preload() {
             d.show();
         });
 
-        c.mousePressed(()=>{stage = 23
+        c.mousePressed(()=>{stage = 21
             b.hide();
             c.hide();
             end1.show();
@@ -499,7 +499,7 @@ function preload() {
             h.show();
         });
       
-        g.mousePressed(()=>{stage = 23
+        g.mousePressed(()=>{stage = 21
             f.hide();
             g.hide();
         });
@@ -526,6 +526,7 @@ function preload() {
           
         //text 
         image(textBox,0,0);     
+        text('[DAHLIA] "Thank you again, Im Dahlia by the way. I hope I see you around again."',50,560,1200)
 
         i.mousePressed(()=>{stage = 13
             i.hide();
@@ -597,7 +598,6 @@ function preload() {
         n.mousePressed(()=>{stage = 18
             n.hide();
             o.show();
-            p.show();
         });
         break;
 
@@ -607,76 +607,44 @@ function preload() {
 
         //text
         image(textBox,0,0);
-        text('I start to get changed but theres more of my things missing. My hoodies, tshirts, make up... perfume..? Where did all my things go?? Theres no way I misplaced them all.',50,560,1200);
+        text('I decide to just forget it and hop into the shower while my coffee cools in the fridge. But when I get our and change, theres more of my things missing. My hoodies, tshirts, make up... perfume..?',50,560,1200);
         
         o.mousePressed(()=>{stage = 19
             o.hide();
-            p.hide();
-            q.show();
-        });
-
-        p.mousePressed(()=>{stage = 20
-            o.hide();
-            p.hide();
-            r.show();
+            p.show();
         });
         break;
         
     case 19:
         //background scene
-        image(ss8,0,0);
+        image(ss9,0,0);
 
         //text  
         image(textBox,0,0);
-        text('They come but do absolutely nothing. "There was no sign of break in so theres nothing we can do about it," he said.',50,560,1200);
+        text('As I walk out the bathroom, I let out a large gasp. In front me stood a 5 foot 6 blonde woman withh sark skin and a red jumper. The same woman from earlier this morning. Only she wasnt on the street, she was in my apartment.',50,560,1200);
         
-        q.mousePressed(()=>{stage = 23
-            q.hide();
-            end1.show();
+        p.mousePressed(()=>{stage = 20
+            p.hide();
+            q.show();
         });
-        break;s
+
+        break;
     
     case 20:
         //background scene
-        image(ss7,0,0);
+        image(st0,0,0);
 
         //text  
         image(textBox,0,0);
+        text('[DAHLIA] "Hi my love, how are you?" I was frozen in fear. How did she get in here? Why was she in here? I have to get out. As I moved my feet towards the front door shepulled my kitchen knife from behind her back.',50,560,1200);
 
-        r.mousePressed(()=>{stage = 21
-            r.hide();
-            s.show();
-        });
-        break;
-
-    case 21:
-        //background
-        image(ss7,0,0);
-
-        //text
-        image(textBox,0,0);
-        text('I head to the bathroom and strip down before hopping into the shower. I wait for the water to get steamy before starting my shoower.',50,560,1200);
-
-        s.mousePressed(()=>{stage = 22
-            s.hide();
-            t.show();
-        });
-        break;
-
-    case 22:
-        //background
-        image(bg,0,0);
-
-        //text
-        image(textBox,0,0);
-
-        t.mousePressed(()=>{stage = 24
-            t.hide();
+        q.mousePressed(()=>{stage = 22
+            q.hide();
             end2.show();
         });
         break;
 
-    case 23:
+    case 21:
         //background
         image(ss2,0,0);
 
@@ -691,25 +659,20 @@ function preload() {
         });
         break;
 
-    case 24:
+    case 22:
         //background
-        image(bg,0,0);
+        image(end2s,0,0);
 
         //text
         image(textBox,0,0);
+        text('You were knapped by a random woman you met off the street just because you did something nice. I guess good karma doesnt always exist.',50,560,1200);
 
         end2.mousePressed(()=>{stage = 0
             end2.hide();
             newGame.show();
             settings.show();
         });
-        break;
-
-    case 25:
-        //background
-        //text
-        break;
-        
+        break;     
  }
 }
 
